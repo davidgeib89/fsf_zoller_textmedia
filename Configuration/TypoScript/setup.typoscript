@@ -57,3 +57,14 @@ plugin.tx_fsfzollertextmedia._CSS_DEFAULT_STYLE (
         color:green;
     }
 )
+
+page{
+	includeCSS{
+		fsfzollertextmedia =  EXT:fsf_zoller_textmedia/Resources/Public/css/fsf_zoller_textmedia.css
+      
+	}
+	includeJSFooterlibs {
+        fsfzollertextmedia =  EXT:fsf_zoller_textmedia/Resources/Public/js/main.js
+    }
+}
+

@@ -1,36 +1,113 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<div class="container fsf-zoller-textmedia">
+    <div class="row">
+        <f:if condition="{settings.type} == 'mright'">
+            <div class="col-12 col-xl-5 text-element-left">
+                <f:format.html> {settings.text} </f:format.html>
+            </div>
+            <div class="col-12 col-xl-1"></div>
+            <div class="col-12 col-xl-6">
+                <f:if condition="{settings.img1}">
+                    <f:then
+                        ><f:image
+                            class="image-right"
+                            src="/uploads/tx_fsfzollertextmedia/{settings.img1}"
+                        />
+                    </f:then>
+                    <f:else>
+                        <div class="video-container">
+                            <a
+                                class="youtube-container"
+                                data-fancybox
+                                href="https://www.youtube.com/watch?v={settings.youtube}&start={settings.youtubestart}&end={settings.youtubeende}"
+                            >
+                                <f:if condition="{settings.overlay} != ''">
+                                    <div
+                                        class="youtube-overlay youtube-overlay-desk"
+                                    >
+                                    </div>
+                                </f:if>
+                                <f:if condition="{settings.overlayimage} != ''">
+                                    <f:then>
+                                        <div
+                                            class="youtube-image"
+                                            style="
+                                                background-image: url('{f:uri.image(src:'/uploads/tx_fsfzollertextmedia/{settings.overlayimage}', treatIdAsReference:1, width:'660c' , height:'370c')}');
+                                            "
+                                        >
+                                            <span class="play-btn"></span>
+                                        </div>
+                                    </f:then>
+                                    <f:else>
+                                        <div
+                                            class="youtube-image"
+                                            style="
+                                                background-image: url(https://img.youtube.com/vi/{settings.youtube}/maxresdefault.jpg);
+                                            "
+                                        >
+                                            <span class="play-btn"></span>
+                                        </div>
+                                    </f:else>
+                                </f:if>
+                            </a>
+                        </div>
+                    </f:else>
+                </f:if>
+            </div>
+        </f:if>
 
-This Template is responsible for creating a table of domain objects.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
-<f:section name="content">
-    <h1>Listing for Textmedia</h1>
-
-    <f:flashMessages />
-
-    <table  class="tx_fsfzollertextmedia" >
-        <tr>
-            <th> </th>
-            <th> </th>
-        </tr>
-
-        <f:for each="{textmedias}" as="textmedia">
-            <tr>
-                <td><f:link.action action="edit" arguments="{textmedia : textmedia}">Edit</f:link.action></td>
-                <td><f:link.action action="delete" arguments="{textmedia : textmedia}">Delete</f:link.action></td>
-            </tr>
-        </f:for>
-    </table>
-
-    <f:link.action action="new">New Textmedia</f:link.action>
-</f:section>
-</html>
+        <f:if condition="{settings.type} == 'mleft'">
+            <div class="col-12 col-xl-6">
+                <f:if condition="{settings.img1}">
+                    <f:then>
+                        <f:image
+                            class="image-left"
+                            src="/uploads/tx_fsfzollertextmedia/{settings.img1}"
+                        />
+                    </f:then>
+                    <f:else>
+                        <div class="video-container">
+                            <a
+                                class="youtube-container"
+                                data-fancybox
+                                href="https://www.youtube.com/watch?v={settings.youtube}&start={settings.youtubestart}&end={settings.youtubeende}"
+                            >
+                                <f:if condition="{settings.overlay} != ''">
+                                    <div
+                                        class="youtube-overlay youtube-overlay-desk"
+                                    >
+                                    </div>
+                                </f:if>
+                                <f:if condition="{settings.overlayimage} != ''">
+                                    <f:then>
+                                        <div
+                                            class="youtube-image"
+                                            style="
+                                                background-image: url('{f:uri.image(src:'/uploads/tx_fsfzollertextmedia/{settings.overlayimage}', treatIdAsReference:1, width:'660c' , height:'370c')}');
+                                            "
+                                        >
+                                            <span class="play-btn"></span>
+                                        </div>
+                                    </f:then>
+                                    <f:else>
+                                        <div
+                                            class="youtube-image"
+                                            style="
+                                                background-image: url(https://img.youtube.com/vi/{settings.youtube}/maxresdefault.jpg);
+                                            "
+                                        >
+                                            <span class="play-btn"></span>
+                                        </div>
+                                    </f:else>
+                                </f:if>
+                            </a>
+                        </div>    
+                    </f:else>
+                </f:if>
+            </div>
+            <div class="col-12 col-xl-1"></div>
+            <div class="col-12 col-xl-5 text-element-right">
+                <f:format.html> {settings.text} </f:format.html>
+            </div>
+        </f:if>
+    </div>
+</div>

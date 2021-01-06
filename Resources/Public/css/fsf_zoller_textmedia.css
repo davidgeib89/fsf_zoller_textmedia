@@ -1,0 +1,122 @@
+.fsf-zoller-textmedia {
+    margin-bottom: 250px !important;
+}
+
+.fsf-zoller-textmedia .image-left,
+.fsf-zoller-textmedia .image-right {
+    width: 100%;
+    height: auto;
+}
+
+.fsf-zoller-textmedia .video-container {
+    height: 100%;
+}
+
+.fsf-zoller-textmedia .video-container iframe {
+    width: 100%;
+    min-height: 365px;
+    height: 100%;
+}
+
+.fsf-zoller-textmedia .youtube-container .play-btn {
+    width: 60px;
+    height: 60px;
+    background-image: url("play.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fsf-zoller-textmedia .youtube-container .youtube-overlay,
+.fsf-zoller-textmedia .youtube-container .youtube-overlay {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    background-color: #0091dc;
+    z-index: 99999;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fsf-zoller-textmedia .youtube-container {
+    padding-top: 56.25%;
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@media (hover: hover) {
+    .fsf-zoller-textmedia .youtube-container:hover .youtube-overlay,
+    .fsf-zoller-textmedia .youtube-container:hover .youtube-overlay {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .fsf-zoller-textmedia .video-container iframe {
+        width: 100%;
+        min-height: 365px;
+        height: 100%;
+    }
+
+    .fsf-zoller-textmedia .video-container {
+        width: 100%;
+        min-height: inherit;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .fsf-zoller-textmedia .youtube-container .youtube-overlay,
+    .fsf-zoller-textmedia .youtube-container .youtube-overlay {
+        opacity: 1;
+        transition: opacity 500ms ease-in-out;
+        background-color: white;
+        z-index: 99;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+    }
+
+    .fsf-zoller-textmedia .text-element-left {
+        margin-bottom: 40px;
+    }
+
+    .fsf-zoller-textmedia .text-element-right {
+        margin-top: 40px;
+    }
+
+    .fsf-zoller-textmedia {
+        margin-bottom: 50px !important;
+    }
+}
+
+.fsf-zoller-textmedia .youtube-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
