@@ -1,0 +1,20 @@
+<h1>
+    Zoller Text Media
+    <f:if condition="{pi_flexform_transformed.settings.type} == 'mleft'">
+        (Medium links)
+    </f:if>
+    <f:if condition="{pi_flexform_transformed.settings.type} == 'mright'">
+        (Medium rechts)
+    </f:if>
+</h1>
+
+<f:format.html>{pi_flexform_transformed.settings.text}</f:format.html>
+<f:if condition="{pi_flexform_transformed.settings.img1}">
+    <f:image src="/uploads/tx_fsfzollertextmedia/{pi_flexform_transformed.settings.img1}" height="150" />
+</f:if>
+<f:if condition="{pi_flexform_transformed.settings.overlayimage}">
+    <f:then><f:image src="/uploads/tx_fsfzollertextmedia/{pi_flexform_transformed.settings.overlayimage}" height="150" /></f:then>
+    <f:else><img src="https://img.youtube.com/vi/KnAMnMX0fCU/maxresdefault.jpg" style="max-height:150px;" /></f:else>
+</f:if>
+
+
