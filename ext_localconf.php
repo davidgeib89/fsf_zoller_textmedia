@@ -41,7 +41,7 @@ call_user_func(
 			$iconRegistry->registerIcon(
 				'fsf_zoller_textmedia-plugin-zollertextmedia',
 				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:fsf_zoller_textmedia/Resources/Public/Icons/user_plugin_zollertextmedia.svg']
+				['source' => 'EXT:fsf_zoller_textmedia/Resources/Public/Icons/zoller_z.svg']
 			);
 		
     }

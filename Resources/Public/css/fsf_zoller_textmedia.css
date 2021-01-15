@@ -107,6 +107,16 @@
     .fsf-zoller-textmedia {
         margin-bottom: 50px !important;
     }
+
+    .fsf-zoller-textmedia .image-left,
+    .fsf-zoller-textmedia .image-right {
+        height: auto;
+        max-height: 300px;
+        max-width: 100%;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 .fsf-zoller-textmedia .youtube-image {

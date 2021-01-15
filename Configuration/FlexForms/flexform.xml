@@ -62,7 +62,7 @@
 					</settings.img1>
                     <settings.overlayimage>
                         <TCEforms>
-                            <label>Video Platzhalter</label>
+                            <label>Video Thumbnail</label>
                             <config>
                                 <type>group</type>
                                 <internal_type>file</internal_type>
