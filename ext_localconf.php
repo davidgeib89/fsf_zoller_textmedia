@@ -24,7 +24,7 @@ call_user_func(
                     elements {
                         zollertextmedia {
                             iconIdentifier = fsf_zoller_textmedia-plugin-zollertextmedia
-                            title = LLL:EXT:fsf_zoller_textmedia/Resources/Private/Language/locallang_db.xlf:tx_fsf_zoller_textmedia_zollertextmedia.name
+                            title = Text Media
                             description = LLL:EXT:fsf_zoller_textmedia/Resources/Private/Language/locallang_db.xlf:tx_fsf_zoller_textmedia_zollertextmedia.description
                             tt_content_defValues {
                                 CType = list
