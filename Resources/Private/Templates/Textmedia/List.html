@@ -1,113 +1,139 @@
-<div class="container fsf-zoller-textmedia">
-    <div class="row">
-        <f:if condition="{settings.type} == 'mright'">
-            <div class="col-12 col-xl-5 text-element-left">
-                <f:format.html> {settings.text} </f:format.html>
-            </div>
-            <div class="col-12 col-xl-1"></div>
-            <div class="col-12 col-xl-6">
-                <f:if condition="{settings.img1}">
-                    <f:then
-                        ><f:image
-                            class="image-right"
-                            src="/uploads/tx_fsfzollertextmedia/{settings.img1}"
-                        />
-                    </f:then>
-                    <f:else>
-                        <div class="video-container">
-                            <a
-                                class="youtube-container"
-                                data-fancybox
-                                href="https://www.youtube.com/watch?v={settings.youtube}&start={settings.youtubestart}&end={settings.youtubeende}"
-                            >
-                                <f:if condition="{settings.overlay} != ''">
-                                    <div
-                                        class="youtube-overlay youtube-overlay-desk"
+<div
+    class="
+        fsf-zoller-textmedia-wrapper
+        {f:if(condition:
+        '{settings.border}',
+        then:
+        'withborder')}
+        {f:if(condition:
+        '{settings.border-color}
+        ==
+        \'yellow\'',
+        then:
+        'yellow-border')}
+    "
+>
+    <div class="container-fluid fsf-zoller-textmedia">
+        <div class="row">
+            <f:if condition="{settings.type} == 'mright'">
+                <div class="col-12 col-xl-5 text-element-left">
+                    <div class="text-wrapper">
+                        <f:format.html> {settings.text} </f:format.html>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-7">
+                    <f:if condition="{settings.img1}">
+                        <f:then
+                            ><f:image
+                                class="image-right"
+                                src="/uploads/tx_fsfzollertextmedia/{settings.img1}"
+                            />
+                        </f:then>
+                        <f:else>
+                            <div class="video-container">
+                                <a
+                                    class="youtube-container"
+                                    data-fancybox
+                                    href="https://www.youtube.com/watch?v={settings.youtube}&start={settings.youtubestart}&end={settings.youtubeende}"
+                                >
+                                    <f:if condition="{settings.overlay} != ''">
+                                        <div
+                                            class="
+                                                youtube-overlay
+                                                youtube-overlay-desk
+                                            "
+                                        ></div>
+                                    </f:if>
+                                    <f:if
+                                        condition="{settings.overlayimage} != ''"
                                     >
-                                    </div>
-                                </f:if>
-                                <f:if condition="{settings.overlayimage} != ''">
-                                    <f:then>
-                                        <div
-                                            class="youtube-image"
-                                            style="
-                                                background-image: url('{f:uri.image(src:'/uploads/tx_fsfzollertextmedia/{settings.overlayimage}', treatIdAsReference:1, width:'660c' , height:'370c')}');
-                                            "
-                                        >
-                                            <span class="play-btn"></span>
-                                        </div>
-                                    </f:then>
-                                    <f:else>
-                                        <div
-                                            class="youtube-image"
-                                            style="
-                                                background-image: url(https://img.youtube.com/vi/{settings.youtube}/maxresdefault.jpg);
-                                            "
-                                        >
-                                            <span class="play-btn"></span>
-                                        </div>
-                                    </f:else>
-                                </f:if>
-                            </a>
-                        </div>
-                    </f:else>
-                </f:if>
-            </div>
-        </f:if>
+                                        <f:then>
+                                            <div
+                                                class="youtube-image"
+                                                style="
+                                                    background-image: url('{f:uri.image(src:'/uploads/tx_fsfzollertextmedia/{settings.overlayimage}', treatIdAsReference:1, width:'660c' , height:'370c')}');
+                                                "
+                                            >
+                                                <span class="play-btn"></span>
+                                            </div>
+                                        </f:then>
+                                        <f:else>
+                                            <div
+                                                class="youtube-image"
+                                                style="
+                                                    background-image: url(https://img.youtube.com/vi/{settings.youtube}/maxresdefault.jpg);
+                                                "
+                                            >
+                                                <span class="play-btn"></span>
+                                            </div>
+                                        </f:else>
+                                    </f:if>
+                                </a>
+                            </div>
+                        </f:else>
+                    </f:if>
+                </div>
+            </f:if>
 
-        <f:if condition="{settings.type} == 'mleft'">
-            <div class="col-12 col-xl-6">
-                <f:if condition="{settings.img1}">
-                    <f:then>
-                        <f:image
-                            class="image-left"
-                            src="/uploads/tx_fsfzollertextmedia/{settings.img1}"
-                        />
-                    </f:then>
-                    <f:else>
-                        <div class="video-container">
-                            <a
-                                class="youtube-container"
-                                data-fancybox
-                                href="https://www.youtube.com/watch?v={settings.youtube}&start={settings.youtubestart}&end={settings.youtubeende}"
-                            >
-                                <f:if condition="{settings.overlay} != ''">
-                                    <div
-                                        class="youtube-overlay youtube-overlay-desk"
+            <f:if condition="{settings.type} == 'mleft'">
+                <div class="col-12 col-xl-7">
+                    <f:if condition="{settings.img1}">
+                        <f:then>
+                            <f:image
+                                class="image-left"
+                                src="/uploads/tx_fsfzollertextmedia/{settings.img1}"
+                            />
+                        </f:then>
+                        <f:else>
+                            <div class="video-container">
+                                <a
+                                    class="youtube-container"
+                                    data-fancybox
+                                    href="https://www.youtube.com/watch?v={settings.youtube}&start={settings.youtubestart}&end={settings.youtubeende}"
+                                >
+                                    <f:if condition="{settings.overlay} != ''">
+                                        <div
+                                            class="
+                                                youtube-overlay
+                                                youtube-overlay-desk
+                                            "
+                                        ></div>
+                                    </f:if>
+                                    <f:if
+                                        condition="{settings.overlayimage} != ''"
                                     >
-                                    </div>
-                                </f:if>
-                                <f:if condition="{settings.overlayimage} != ''">
-                                    <f:then>
-                                        <div
-                                            class="youtube-image"
-                                            style="
-                                                background-image: url('{f:uri.image(src:'/uploads/tx_fsfzollertextmedia/{settings.overlayimage}', treatIdAsReference:1, width:'660c' , height:'370c')}');
-                                            "
-                                        >
-                                            <span class="play-btn"></span>
-                                        </div>
-                                    </f:then>
-                                    <f:else>
-                                        <div
-                                            class="youtube-image"
-                                            style="
-                                                background-image: url(https://img.youtube.com/vi/{settings.youtube}/maxresdefault.jpg);
-                                            "
-                                        >
-                                            <span class="play-btn"></span>
-                                        </div>
-                                    </f:else>
-                                </f:if>
-                            </a>
-                        </div>    
-                    </f:else>
-                </f:if>
-            </div>
-            <div class="col-12 col-xl-1"></div>
-            <div class="col-12 col-xl-5 text-element-right">
-                <f:format.html> {settings.text} </f:format.html>
-            </div>
-        </f:if>
+                                        <f:then>
+                                            <div
+                                                class="youtube-image"
+                                                style="
+                                                    background-image: url('{f:uri.image(src:'/uploads/tx_fsfzollertextmedia/{settings.overlayimage}', treatIdAsReference:1, width:'660c' , height:'370c')}');
+                                                "
+                                            >
+                                                <span class="play-btn"></span>
+                                            </div>
+                                        </f:then>
+                                        <f:else>
+                                            <div
+                                                class="youtube-image"
+                                                style="
+                                                    background-image: url(https://img.youtube.com/vi/{settings.youtube}/maxresdefault.jpg);
+                                                "
+                                            >
+                                                <span class="play-btn"></span>
+                                            </div>
+                                        </f:else>
+                                    </f:if>
+                                </a>
+                            </div>
+                        </f:else>
+                    </f:if>
+                </div>
+                <div class="col-12 col-xl-5 text-element-right">
+                    <div class="text-wrapper">
+                        <f:format.html> {settings.text} </f:format.html>
+                    </div>
+                </div>
+            </f:if>
+        </div>
     </div>
 </div>

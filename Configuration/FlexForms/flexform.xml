@@ -30,7 +30,35 @@
 								</items>
 							</config>
 						</TCEforms>
-					</settings.type>    
+					</settings.type>
+                    <settings.border>
+                        <TCEforms>
+                            <label>Rand anzeigen</label>
+							<config>
+							<type>check</type>
+							</config>
+                        </TCEforms>
+                    </settings.border>
+                    <settings.border-color>
+						<TCEforms>
+							<label>Randfarbe</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Grau</numIndex>
+										<numIndex index="1">grey</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Gelb</numIndex>
+										<numIndex index="1">yellow</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.border-color>    
                     <settings.text>
                         <TCEforms>
                             <label>Text</label>
